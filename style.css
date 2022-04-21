@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+:root {
+/* ### Primary */
+--Blue: hsl(223, 87%, 63%);
+
+/* ### Secondary */
+--PaleBlue: hsl(223, 100%, 88%);
+--LightRed: hsl(354, 100%, 66%);
+
+/* ### Neutral */
+--Gray: hsl(0, 0%, 59%);
+--VeryDarkBlue: hsl(209, 33%, 12%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Bold {
+    font-weight: bold;
+    color: black;
+}
+
+
+body {
+    font-family: 'Libre Franklin';
+    font-size: 20px;
+    color: var(--Gray);
+}
+main {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#headline {
+    margin-top: 1.3em;
+    margin-bottom: 0.2em;
+    font-size: 2em;
+    font-weight: lighter;
+    color: var(--Gray);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+
+form input[type="text"]{
+    width: 100%;
+    height: 2.5em;
+    border: 1px solid var(--PaleBlue);
+    outline: none;
+    border-radius: 8em;
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--Gray);
+    padding-left: 1.5em;
+    margin-bottom: 20px;
+}
+#email::placeholder{
+    color: var(--Gray);
+    font-weight: 100;
+}
+form.error input[type="text"]{
+    border: 1px solid var(--LightRed);
+}
+form .error_text {
+	position: absolute;
+	top: 315px;
+    text-align: center;
+	font-size: .95rem;
+	margin-top: 10px;
+	color: hsl(354, 100%, 66%);
+	font-weight: 500;
+	font-style: italic;
+    padding-bottom: 1000px;
+    
+}
+
+
+#notifyBtn {
+    width: 100%;
+    height: 3em;
+    background-color: var(--Blue);
+    border: none;
+    outline: none;
+    border-radius: 8em;
+    box-shadow: 10px 10px 20px 0.1px var(--Gray);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+#notifyBtn:hover{
+    color: var(--PaleBlue);
+}
+#illustration {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.socials{
+    width: 100%;
+    color: var(--Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.socials i {
+    width: 30px;
+    margin: 0 5px;
+    border: 1px solid var(--Gray);
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media only screen and (min-width:768px) {
+    form{
+        flex-direction: row;
+        max-width: 50%;
+        margin-bottom: 50px;
+    }
+    #notifyBtn{
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+        width: 40%;
+        margin-left: 20px;
+        margin-top: -20px;
+    }
+    #illustration {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        
+    }
+    form .error_text{
+        left: 400px;
+    }
+}
+
